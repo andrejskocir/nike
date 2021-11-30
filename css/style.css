@@ -86,7 +86,14 @@ body{
 }
 .kopija1{
   stroke: #f16041;
-  animation-delay: -1 s;
+  animation-delay: -1s;
+}
+.pozsvg{
+  position: absolute;
+  transform: rotateY(180deg);
+  z-index: 20;
+  left: 6.5em;
+  top: 1em
 }
 
 /*
@@ -139,6 +146,7 @@ nav ul li{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
   }
   .sneaker img {
     height: 180px;
