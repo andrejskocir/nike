@@ -69,22 +69,26 @@ body{
 
 .pot{
   fill-opacity: 0;
-  stroke: #000;
-  stroke-width: 3px;
-  stroke-dashoffset: 0%;
-  stroke-dasharray: 50% 50%;
-  animation: pot 6s linear infinite;
 }
-.kopija1{
+.kopija{
+  stroke-width: 3px;
   stroke: #fff;
   animation-delay: -3s;
+  stroke-dashoffset: 0%;
+  stroke-dasharray: 50% 110%;
+  animation: pot 6s linear infinite;
 }
 @keyframes pot{
 
   100%{
-    stroke-dashoffset: -50%;
+    stroke-dashoffset: -35%;
   }
 
+}
+
+.kopija1{
+  stroke: #000;
+  animation-delay: -2s;
 }
 /*
 nav img{
