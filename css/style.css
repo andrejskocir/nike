@@ -61,6 +61,31 @@ body{
 #vic{
   width:300px;
 }
+
+.nikesvg{
+  margin-top: 10%;
+  display: block;
+}
+
+.pot{
+  fill-opacity: 0;
+  stroke: #000;
+  stroke-width: 3px;
+  stroke-dashoffset: 0%;
+  stroke-dasharray: 50% 50%;
+  animation: pot 6s linear infinite;
+}
+.kopija1{
+  stroke: #fff;
+  animation-delay: -3s;
+}
+@keyframes pot{
+
+  100%{
+    stroke-dashoffset: -50%;
+  }
+
+}
 /*
 nav img{
     height: 200px;
