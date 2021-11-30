@@ -1,1 +1,1 @@
-nike andrejskocir.github.io/nike
+nike https://andrejskocir.github.io/nike
