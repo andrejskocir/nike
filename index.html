@@ -12,14 +12,41 @@
 </head>
 <body>
     <div class="wrapper">
-        <!--<nav>
+
+        <div class="opis">
+            <canvas id="canvas"></canvas>
+            <nav>
             <ul>
-                <li>Nike Air Zoom Maxfly</li>
-                <li>Nike Long Jump Elite</li>
-                <li class="right">Nike ZoomX Dragonfly</li>
-                <li class="right">Nike Air Zoom Victory</li>
+                <li>Home</li>
+                <li>Products</li>
+                <li>Contact</li>
+                <li>FAQ</li>
+                <li>Login</li>
             </ul>
-        </nav>-->
+        </nav>
+        <div class="athletes">
+            <div class="posamezni">
+                <div class="layer">
+                    <img src="images/np_file_114151.jpeg"></img>
+                </div>
+                <h2>Su Bingtian</h2>
+            </div>
+            <div class="posamezni">
+                <div class="layer">
+                    <img id="jacobs" src="images/jacobs.jpg"></img>
+                </div>
+                <h2>Lamont Marcell Jacobs</h2>
+            </div>
+            <div class="posamezni">
+                <div class="layer">
+                    <img id="thompson" src="images/thompson.jpg"></img>
+                </div>
+                <h2>Elaine Thompson-Herah</h2>
+            </div>
+        </div>
+        
+        <!--<h1>New Nike 2021 Tokio<br> Collection is here.</h1>-->
+        </div>
         <div class="top">
             <video autoplay loop muted class="back-video zgornji">
                 <source src="videos/top.m4v" type="video/mp4">
@@ -30,11 +57,15 @@
                         <div class="circle"></div>
                         <img src="images/maxfly.png">
                         <div class="pozsvg">
-                            <svg class="nikesvg" xmlns="http://www.w3.org/2000/svg" width="125" height="125" viewBox="0 0 192.756 192.756">
-                            <g fill-rule="evenodd" clip-rule="evenodd"><path fill="none" d="M0 0h192.756v192.756H0V0z"/><path id="pot1"  class="pot" d="M42.741 71.477c-9.881 11.604-19.355 25.994-19.45 36.75-.037 4.047 1.255 7.58 4.354 10.256 4.46 3.854 9.374 5.213 14.264 5.221 7.146.01 14.242-2.873 19.798-5.096 9.357-3.742 112.79-48.659 112.79-48.659.998-.5.811-1.123-.438-.812-.504.126-112.603 30.505-112.603 30.505a24.771 24.771 0 0 1-6.524.934c-8.615.051-16.281-4.731-16.219-14.808.024-3.943 1.231-8.698 4.028-14.291z"/></g>
-                            <use xlink:href="#pot1" class="kopija kopija1"></use>
-                            <use xlink:href="#pot1" class="kopija kopija2"></use>
-                            </svg>        
+                            <svg class="nikesvg"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="270px" height="85px">
+                           <path id="pot1"  class="pot" fill-rule="evenodd"
+                            d="M-0.000,43.000 L47.000,42.000 L105.000,43.000 L160.000,46.000 L193.000,49.000 C193.000,49.000 205.330,49.283 212.000,48.000 C218.321,46.784 223.000,45.000 223.000,45.000 C223.000,45.000 228.675,40.167 231.000,35.000 C233.169,30.179 232.000,25.000 232.000,25.000 C232.000,25.000 232.109,21.271 230.000,16.000 C227.206,9.016 222.000,0.000 222.000,0.000 C222.000,0.000 234.235,4.633 242.000,12.000 C247.309,17.037 254.197,22.944 258.000,28.000 C262.163,33.534 266.000,41.000 266.000,41.000 C266.000,41.000 268.856,49.263 269.000,53.000 C269.266,59.902 268.000,65.000 268.000,65.000 C268.000,65.000 261.803,75.982 256.000,80.000 C248.929,84.895 229.000,85.000 229.000,85.000 C229.000,85.000 206.921,82.337 186.000,78.000 C165.939,73.841 147.000,69.000 147.000,69.000 C147.000,69.000 129.081,65.367 110.000,62.000 C86.957,57.934 62.000,54.000 62.000,54.000 L37.000,50.000 C37.000,50.000 28.580,48.716 20.000,47.000 C11.087,45.217 -0.000,43.000 -0.000,43.000 Z"/>
+                           <use xlink:href="#pot1" class="kopija kopija1"></use>
+                           <use xlink:href="#pot1" class="kopija kopija2"></use>
+                           </svg>       
                         </div> 
                     </div>
                     <div class="info">
@@ -54,9 +85,9 @@
             </div>
    
             </svg>
-            <div class="container">
+            <div class="container topright">
                 <div class="card topright">
-                    <div class="sneaker">
+                    <div class="sneaker topright">
                         <div class="circle"></div>
                         <img src="images/longjump.png">
                     </div>
