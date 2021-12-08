@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+html {
+	scroll-behavior: smooth;
+}
 
 body{
   perspective: 1000px;
@@ -31,20 +34,26 @@ body{
   padding-top: 15%;
 }
 .opis img {
+  object-fit: cover;
+  opacity: 80%;
   height: 20em;
   width: 20em;
-  object-fit: cover;
-  object-position: -2.5em;
-  opacity: 80%;
-  overflow: hidden;
-  border-radius: 30px;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
 }
+.opis a{
+  text-decoration: none;
+  color: #fff;}
+#su{
+  object-position: -2.5em;
+} 
+
 #jacobs{
   object-position: -8em;
 }
 #thompson{
   object-position: -6em;
+}
+#murphy{
+  object-position: -7em;
 }
 .athletes{
   height: 100vh;
@@ -56,6 +65,19 @@ body{
 .posamezni h2{
   color: white;
   text-align: center;
+}
+
+.layer{
+  height: 20em;
+  width: 20em;
+  overflow: hidden;
+  border-radius: 30px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+}
+.layer:hover{
+  background: rgba(255, 255, 255, 0.5);
+  transition: 0.5s ease-in-out;
+  margin-bottom: 1em;
 }
 
 .container {
@@ -144,7 +166,7 @@ nav{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
     z-index: 100;
 }
 nav ul{
@@ -154,7 +176,7 @@ nav ul{
 
 nav ul li{
     display: inline-block;
-    margin: 0 3.2em;
+    margin: 0 3em;
     cursor: pointer;
 }
 
