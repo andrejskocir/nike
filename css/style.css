@@ -66,6 +66,9 @@ body{
   color: white;
   text-align: center;
 }
+.posamezni:hover{
+  transform: translateY(-10%);
+}
 
 .layer{
   height: 20em;
@@ -77,7 +80,6 @@ body{
 .layer:hover{
   background: rgba(255, 255, 255, 0.5);
   transition: 0.5s ease-in-out;
-  margin-bottom: 1em;
 }
 
 .container {
