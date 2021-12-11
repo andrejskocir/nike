@@ -8,6 +8,14 @@ const pos1 = document.getElementById("pos1");
 const pos2 = document.getElementById("pos2");
 const pos3 = document.getElementById("pos3");
 const pos4 = document.getElementById("pos4");
+const su = document.getElementById("su");
+const jacobs = document.getElementById("jacobs");
+const thompson = document.getElementById("thompson");
+const murphy = document.getElementById("murphy");
+const sutext = document.getElementById("sutext");
+const jacobstext = document.getElementById("jacobstext");
+const thompsontext = document.getElementById("thompsontext");
+const murphytext = document.getElementById("murphytext");
 //Items
 const use = document.querySelector(".sneaker");
 const use1 = document.querySelector(".sneaker");
@@ -28,30 +36,54 @@ card.style.transition = "all 0.5s ease";
 //Pos1
 pos1.addEventListener("mouseenter", (e) => { 
   pos1.style.transition = "all 0.5s ease";
+  su.style.transition = "all 0.5s ease";
+  sutext.style.transition = "all 0.5s ease";
+  sutext.style.fontSize = "1.55em";
 });
 pos1.addEventListener("mouseleave", (e) => {
   pos1.style.transition = "all 0.5s ease";
+  su.style.transition = "all 0.5s ease";
+  sutext.style.transition = "all 0.5s ease";
+  sutext.style.fontSize = "1.5em";
   });
 //Pos2
 pos2.addEventListener("mouseenter", (e) => { 
     pos2.style.transition = "all 0.5s ease";
+    jacobs.style.transition = "all 0.5s ease";
+    jacobstext.style.transition = "all 0.5s ease";
+    jacobstext.style.fontSize = "1.55em";
   });
-pos2.addEventListener("mouseleave", (e) => {
-pos2.style.transition = "all 0.5s ease";
+  pos2.addEventListener("mouseleave", (e) => {
+  pos2.style.transition = "all 0.5s ease";
+  jacobs.style.transition = "all 0.5s ease";
+  jacobstext.style.transition = "all 0.5s ease";
+  jacobstext.style.fontSize = "1.5em";
     });
 //Pos3
 pos3.addEventListener("mouseenter", (e) => { 
  pos3.style.transition = "all 0.5s ease";
+ thompson.style.transition = "all 0.5s ease";
+  thompsontext.style.transition = "all 0.5s ease";
+  thompsontext.style.fontSize = "1.55em";
     });
 pos3.addEventListener("mouseleave", (e) => {
   pos3.style.transition = "all 0.5s ease";
+  thompson.style.transition = "all 0.5s ease";
+  thompsontext.style.transition = "all 0.5s ease";
+  thompsontext.style.fontSize = "1.5em";
       });
 //Pos4
 pos4.addEventListener("mouseenter", (e) => { 
   pos4.style.transition = "all 0.5s ease";
+  murphy.style.transition = "all 0.5s ease";
+  murphytext.style.transition = "all 0.5s ease";
+  murphytext.style.fontSize = "1.55em";
       });
 pos4.addEventListener("mouseleave", (e) => {
   pos4.style.transition = "all 0.5s ease";
+  murphy.style.transition = "all 0.5s ease";
+  murphytext.style.transition = "all 0.5s ease";
+  murphytext.style.fontSize = "1.5em";
         });
 
 

@@ -19,8 +19,12 @@ body{
     position: relative;
 
 }
+.meni{
+  height: 20vh;
+  width: 100%;
+}
 .opis{
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-image: linear-gradient(rgb(0, 0, 0, 0.5),rgb(0, 0, 0, 1)),url(../images/tokio1.jpg);
   background-position: center;
@@ -35,13 +39,18 @@ body{
 }
 .opis img {
   object-fit: cover;
-  opacity: 80%;
-  height: 20em;
-  width: 20em;
+  opacity: 90%;
+  height: 100%;
+  width: 100%;
+}
+.opis img:hover{
+  transform: scale(1.02);
+  transition: 0.5s ease-in-out;
 }
 .opis a{
   text-decoration: none;
-  color: #fff;}
+  color: #fff;
+}
 #su{
   object-position: -2.5em;
 } 
@@ -56,11 +65,13 @@ body{
   object-position: -7em;
 }
 .athletes{
-  height: 100vh;
+  height: 60vh;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4,minmax(20em,1fr));
+  justify-content: center;
+  align-content: center;
 }
 .posamezni h2{
   color: white;
@@ -70,16 +81,25 @@ body{
   transform: translateY(-10%);
 }
 
+
 .layer{
+  margin: auto;
   height: 20em;
   width: 20em;
   overflow: hidden;
   border-radius: 30px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
 }
-.layer:hover{
-  background: rgba(255, 255, 255, 0.5);
-  transition: 0.5s ease-in-out;
+
+
+@media(max-width: 1500px) {
+  .opis{
+    height: 120vh;
+  }
+  .athletes{
+    grid-row-gap: 4em;
+    grid-template-columns: repeat(2,minmax(20em,1fr));
+  }
 }
 
 .container {
