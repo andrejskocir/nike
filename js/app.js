@@ -1,8 +1,8 @@
 //Movement Animation to happen
 const card = document.querySelector(".card");
-const card1 = document.querySelector(".card topright");
-const container = document.querySelector(".container");
-const container1 = document.querySelector(".container topright");
+const card1 = document.getElementById("cardTR");
+const card2 = document.getElementById("cardBL");
+const card3 = document.getElementById("cardBR");
 //Athletes
 const pos1 = document.getElementById("pos1");
 const pos2 = document.getElementById("pos2");
@@ -18,14 +18,15 @@ const thompsontext = document.getElementById("thompsontext");
 const murphytext = document.getElementById("murphytext");
 //Items
 const use = document.querySelector(".sneaker");
-const use1 = document.querySelector(".sneaker");
+const use1 = document.getElementById("sneakerTR");
+const use2 = document.getElementById("sneakerBL");
+const use3 = document.getElementById("sneakerBR");
+
 //Animate In
 card.addEventListener("mouseenter", (e) => { 
   //Popout
   use.style.transform = "rotateZ(-45deg)";
 });
-
-
 //Animate Out
 card.addEventListener("mouseleave", (e) => {
 card.style.transition = "all 0.5s ease";
@@ -33,6 +34,45 @@ card.style.transition = "all 0.5s ease";
   use.style.transform = "rotateZ(0deg)";
 });
 
+//Animate In
+card1.addEventListener("mouseenter", (e) => { 
+  //Popout
+  use1.style.transform = "rotateZ(-45deg)";
+});
+//Animate Out
+card1.addEventListener("mouseleave", (e) => {
+card1.style.transition = "all 0.5s ease";
+  //Popback
+  use1.style.transform = "rotateZ(0deg)";
+});
+
+//Animate In
+card2.addEventListener("mouseenter", (e) => { 
+  //Popout
+  use2.style.transform = "rotateZ(-45deg)";
+});
+//Animate Out
+card2.addEventListener("mouseleave", (e) => {
+card2.style.transition = "all 0.5s ease";
+  //Popback
+  use2.style.transform = "rotateZ(0deg)";
+});
+
+//Animate In
+card3.addEventListener("mouseenter", (e) => { 
+  //Popout
+  use3.style.transform = "rotateZ(-45deg)";
+});
+//Animate Out
+card3.addEventListener("mouseleave", (e) => {
+card3.style.transition = "all 0.5s ease";
+  //Popback
+  use3.style.transform = "rotateZ(0deg)";
+});
+
+
+
+//Script for athletes
 //Pos1
 pos1.addEventListener("mouseenter", (e) => { 
   pos1.style.transition = "all 0.5s ease";

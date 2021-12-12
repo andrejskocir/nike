@@ -97,8 +97,19 @@ body{
     height: 120vh;
   }
   .athletes{
+    height: 80vh;
     grid-row-gap: 4em;
     grid-template-columns: repeat(2,minmax(20em,1fr));
+  }
+}
+@media(max-width: 700px){
+  .opis{
+    height: 200vh;
+  }
+  .athletes{
+    height: 180vh;
+    grid-row-gap: 4em;
+    grid-template-columns: repeat(1,minmax(20em,1fr));
   }
 }
 
@@ -154,26 +165,9 @@ body{
 }
 
 .pot{
-  fill-opacity: 0;
+  fill-opacity: 0.5;
 }
-.kopija{
-  stroke-width: 3px;
-  stroke: #000;
-  stroke-dashoffset: 0%;
-  stroke-dasharray: 30 30;
-  animation: pot 6s linear infinite;
-}
-@keyframes pot{
 
-  100%{
-    stroke-dashoffset: 100%;
-  }
-
-}
-.kopija1{
-  stroke: #f16041;
-  animation-delay: -1s;
-}
 .pozsvg{
   position: absolute;
   z-index: 20;
@@ -183,8 +177,7 @@ body{
 }
 
 nav{
-    position: absolute;
-    top: 2em;
+    padding: 2em;
     width: 100%;
     display: flex;
     align-items: center;
@@ -202,11 +195,6 @@ nav ul li{
     cursor: pointer;
 }
 
-
-/*
-.right{
-    color:#a4ef7c;
-}*/
 
   .card {
     transform-style: preserve-3d;
@@ -232,6 +220,13 @@ nav ul li{
   .sneaker img {
     height: 180px;
     z-index: 2;
+  }
+  #shape{
+    height: 27.2px;
+    position: absolute;
+    z-index: 20;
+    left: 8em;
+    top: 4.75em;
   }
   .circle {
     width: 15rem;
