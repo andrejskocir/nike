@@ -16,6 +16,7 @@ const sutext = document.getElementById("sutext");
 const jacobstext = document.getElementById("jacobstext");
 const thompsontext = document.getElementById("thompsontext");
 const murphytext = document.getElementById("murphytext");
+const naslov = document.getElementById("naslov");
 //Items
 const use = document.querySelector(".sneaker");
 const use1 = document.getElementById("sneakerTR");
@@ -74,8 +75,18 @@ sutext.style.fontSize = "1.2em";
 jacobstext.style.fontSize = "1.2em";
 thompsontext.style.fontSize = "1.2em";
 murphytext.style.fontSize = "1.2em";
+naslov.style.fontSize = "2em";
 
 //Script for athletes
+//Naslov
+naslov.addEventListener("mouseenter", (e) => { 
+  naslov.style.transition = "all 0.5s ease";
+  naslov.style.fontSize = "2.2em";
+});
+naslov.addEventListener("mouseleave", (e) => {
+  naslov.style.transition = "all 0.5s ease";
+  naslov.style.fontSize = "2em";
+  });
 //Pos1
 pos1.addEventListener("mouseenter", (e) => { 
   pos1.style.transition = "all 0.5s ease";
