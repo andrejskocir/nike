@@ -70,7 +70,10 @@ card3.style.transition = "all 0.5s ease";
   use3.style.transform = "rotateZ(0deg)";
 });
 
-
+sutext.style.fontSize = "1.2em";
+jacobstext.style.fontSize = "1.2em";
+thompsontext.style.fontSize = "1.2em";
+murphytext.style.fontSize = "1.2em";
 
 //Script for athletes
 //Pos1
@@ -78,52 +81,52 @@ pos1.addEventListener("mouseenter", (e) => {
   pos1.style.transition = "all 0.5s ease";
   su.style.transition = "all 0.5s ease";
   sutext.style.transition = "all 0.5s ease";
-  sutext.style.fontSize = "1.55em";
+  sutext.style.fontSize = "1.3em";
 });
 pos1.addEventListener("mouseleave", (e) => {
   pos1.style.transition = "all 0.5s ease";
   su.style.transition = "all 0.5s ease";
   sutext.style.transition = "all 0.5s ease";
-  sutext.style.fontSize = "1.5em";
+  sutext.style.fontSize = "1.2em";
   });
 //Pos2
 pos2.addEventListener("mouseenter", (e) => { 
     pos2.style.transition = "all 0.5s ease";
     jacobs.style.transition = "all 0.5s ease";
     jacobstext.style.transition = "all 0.5s ease";
-    jacobstext.style.fontSize = "1.55em";
+    jacobstext.style.fontSize = "1.3em";
   });
   pos2.addEventListener("mouseleave", (e) => {
   pos2.style.transition = "all 0.5s ease";
   jacobs.style.transition = "all 0.5s ease";
   jacobstext.style.transition = "all 0.5s ease";
-  jacobstext.style.fontSize = "1.5em";
+  jacobstext.style.fontSize = "1.2em";
     });
 //Pos3
 pos3.addEventListener("mouseenter", (e) => { 
  pos3.style.transition = "all 0.5s ease";
  thompson.style.transition = "all 0.5s ease";
   thompsontext.style.transition = "all 0.5s ease";
-  thompsontext.style.fontSize = "1.55em";
+  thompsontext.style.fontSize = "1.3em";
     });
 pos3.addEventListener("mouseleave", (e) => {
   pos3.style.transition = "all 0.5s ease";
   thompson.style.transition = "all 0.5s ease";
   thompsontext.style.transition = "all 0.5s ease";
-  thompsontext.style.fontSize = "1.5em";
+  thompsontext.style.fontSize = "1.2em";
       });
 //Pos4
 pos4.addEventListener("mouseenter", (e) => { 
   pos4.style.transition = "all 0.5s ease";
   murphy.style.transition = "all 0.5s ease";
   murphytext.style.transition = "all 0.5s ease";
-  murphytext.style.fontSize = "1.55em";
+  murphytext.style.fontSize = "1.3em";
       });
 pos4.addEventListener("mouseleave", (e) => {
   pos4.style.transition = "all 0.5s ease";
   murphy.style.transition = "all 0.5s ease";
   murphytext.style.transition = "all 0.5s ease";
-  murphytext.style.fontSize = "1.5em";
+  murphytext.style.fontSize = "1.2em";
         });
 
 
@@ -133,7 +136,7 @@ pos4.addEventListener("mouseleave", (e) => {
 window.onload = function() {
   var canvas = document.getElementById("canvas");
   var context = canvas.getContext("2d");
-
+  context.scale(2,2);
   context.beginPath();
   context.moveTo(15, 4);
   context.bezierCurveTo(15, 4, 11.181, 14.419, 13, 17);
@@ -146,9 +149,9 @@ window.onload = function() {
   context.bezierCurveTo(15, 4, 15, 4, 15, 4);
   context.lineWidth = 1;
 
-  context.strokeStyle = '#fff';
+  context.strokeStyle = '#ffbb00';
   context.stroke();
 
-  context.fillStyle = '#fff';
+  context.fillStyle = '#ffbb00';
   context.fill();
 }
