@@ -81,11 +81,11 @@ naslov.style.fontSize = "2em";
 //Naslov
 naslov.addEventListener("mouseenter", (e) => { 
   naslov.style.transition = "all 0.5s ease";
-  naslov.style.fontSize = "2.2em";
+  naslov.style.color="#fefeb4";
 });
 naslov.addEventListener("mouseleave", (e) => {
   naslov.style.transition = "all 0.5s ease";
-  naslov.style.fontSize = "2em";
+  naslov.style.color="#fff";
   });
 //Pos1
 pos1.addEventListener("mouseenter", (e) => { 

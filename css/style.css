@@ -72,6 +72,7 @@ body{
 .posamezni h2{
   color: white;
   text-align: center;
+  cursor: default;
 }
 .posamezni:hover{
   transform: translateY(-10%);
@@ -83,7 +84,7 @@ body{
 .naslov h1{
   color: #fff;
   text-align: center;
-  
+  cursor:default;
 }
 
 .layer{
@@ -125,6 +126,7 @@ body{
     height: 100vh;
   }
   .athletes{
+    padding-top: 3em;
     height: 70vh;
     gap: 0.6rem;
     grid-template-columns: repeat(4,minmax(15em,1fr));
