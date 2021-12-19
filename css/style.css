@@ -278,7 +278,6 @@ nav ul li:hover::after{
       rgba(0,0,0,1),rgba(176,244,135,0.2)
     );
   }
-  
   .info h1 {
       text-align: center;
     margin-top: 2em;
@@ -309,16 +308,25 @@ nav ul li:hover::after{
   }
   input{
     display: none;
-
   }
+
   input:checked + label {
-    background: #545454;
-    color: #fff;
-    border: 2px solid white;
+    background: rgba(255, 255, 255, 0.5);
+    color: #f16041;
+    border: 2px solid #f16041;
     transition: 0.75s;
+    transform: scale(1.05);
 }
+  .bottom input:checked + label {
+    background: transparent;
+    color: #8cbd6e;
+    border: 2px solid #8cbd6e;
+    transition: 0.75s;
+    transform: scale(1.05);
+  }
   label{
     cursor: pointer;
+    padding-top: 2px;
     text-align: center;
     border: 2px solid #545454;
     border-radius: 30px;
@@ -326,6 +334,7 @@ nav ul li:hover::after{
     width: 5em;
     height: 2em;
   }
+
   .bottom label{
     border: 2px solid rgba(255, 255, 255, 0.7);
     color: rgba(255, 255, 255, 0.7);
@@ -335,24 +344,9 @@ nav ul li:hover::after{
     display: flex;
     justify-content: center;
   }
-  .sizes button {
-    padding: 0.5rem 2rem;
-    background: none;
-    border: none;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: bold;
-    color: #585858;
-  }
-  button.active {
-    background: #585858;
-    color: white;
-  }
+
   .purchase {
-    margin: 0 10% 0;
     transition: all 0.75s ease-out;
-    
   }
   .purchase button {
     width: 15em;
@@ -364,9 +358,22 @@ nav ul li:hover::after{
     border-radius: 30px;
     font-weight: bolder;
     font-size: 1.3em;
-    margin-top: 2em;
+    display: block;
+    margin: auto;
   }
-
+  
+  #pur1{
+    margin-top: 8em;
+  }
+  #pur2{
+    margin-top: 4em;
+  }
+  #pur3{
+    margin-top: 6em;
+  }
+  #pur4{
+    margin-top: 6em;
+  }
   .zelen button{
     background: #8cbd6e;
   }
