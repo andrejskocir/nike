@@ -123,13 +123,14 @@ body{
     padding-top:0;
   }
   body .card{
-    height: 80vh;
+    height: 90vh;
     padding-top: 5rem;
     transform: scale(0.8);
   }
   body .back-video{
     height: 80vh;
   }
+
 }
 
 
@@ -285,20 +286,54 @@ nav ul li:hover::after{
     transition: all 0.75s ease-out;
   }
   .info h3 {
-      text-align: center;
+    text-align: center;
     font-size: 1.3rem;
-    padding: 2rem 0rem;
+    padding: 0.5rem 0rem 1rem 0;
     color: #000;
     font-weight: 200;
     transition: all 0.75s ease-out;
   }
+  #sel{
+    padding: 0 0 0.5em 0;  
+  }
   .bel h1, .bel h3{
     color: #fff;
   }
+  .selectSize{
+    width: 90%;
+    font-size: 1.1em;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+  }
+  input{
+    display: none;
+
+  }
+  input:checked + label {
+    background: #545454;
+    color: #fff;
+    border: 2px solid white;
+    transition: 0.75s;
+}
+  label{
+    cursor: pointer;
+    text-align: center;
+    border: 2px solid #545454;
+    border-radius: 30px;
+    color: #545454;
+    width: 5em;
+    height: 2em;
+  }
+  .bottom label{
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.7);
+  }
+ 
   .sizes {
     display: flex;
-    justify-content: space-around;
-    transition: all 0.75s ease-out;
+    justify-content: center;
   }
   .sizes button {
     padding: 0.5rem 2rem;
@@ -315,8 +350,7 @@ nav ul li:hover::after{
     color: white;
   }
   .purchase {
-    margin: 5rem 10% 0;
-
+    margin: 0 10% 0;
     transition: all 0.75s ease-out;
     
   }
