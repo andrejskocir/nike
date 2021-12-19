@@ -3,25 +3,41 @@ const card = document.querySelector(".card");
 const card1 = document.getElementById("cardTR");
 const card2 = document.getElementById("cardBL");
 const card3 = document.getElementById("cardBR");
-//Athletes
-const pos1 = document.getElementById("pos1");
-const pos2 = document.getElementById("pos2");
-const pos3 = document.getElementById("pos3");
-const pos4 = document.getElementById("pos4");
-const su = document.getElementById("su");
-const jacobs = document.getElementById("jacobs");
-const thompson = document.getElementById("thompson");
-const murphy = document.getElementById("murphy");
-const sutext = document.getElementById("sutext");
-const jacobstext = document.getElementById("jacobstext");
-const thompsontext = document.getElementById("thompsontext");
-const murphytext = document.getElementById("murphytext");
-const naslov = document.getElementById("naslov");
+const krog = document.getElementById("krog");
+
 //Items
 const use = document.querySelector(".sneaker");
 const use1 = document.getElementById("sneakerTR");
 const use2 = document.getElementById("sneakerBL");
 const use3 = document.getElementById("sneakerBR");
+const sneakerPrvi = document.getElementById("krog");
+const naslov = document.getElementById("naslov");
+
+//Animate In
+naslov.addEventListener("mouseenter", (e) => { 
+  //Popout
+  naslov.style.transform = "translateY(-10%)";
+});
+//Animate Out
+naslov.addEventListener("mouseleave", (e) => {
+naslov.style.transition = "all 0.75s ease";
+  //Popback
+  naslov.style.transform = "translateY(0%)";
+});
+
+
+//Animate In
+krog.addEventListener("mouseenter", (e) => { 
+  //Popout
+  sneakerPrvi.style.transform = "rotateZ(20deg) scale(1.1)";
+});
+//Animate Out
+krog.addEventListener("mouseleave", (e) => {
+krog.style.transition = "all 0.75s ease";
+  //Popback
+  sneakerPrvi.style.transform = "rotateZ(0deg)";
+});
+
 
 //Animate In
 card.addEventListener("mouseenter", (e) => { 
@@ -71,83 +87,11 @@ card3.style.transition = "all 0.5s ease";
   use3.style.transform = "rotateZ(0deg)";
 });
 
-sutext.style.fontSize = "1.2em";
-jacobstext.style.fontSize = "1.2em";
-thompsontext.style.fontSize = "1.2em";
-murphytext.style.fontSize = "1.2em";
-naslov.style.fontSize = "2em";
-
-//Script for athletes
-//Naslov
-naslov.addEventListener("mouseenter", (e) => { 
-  naslov.style.transition = "all 0.5s ease";
-  naslov.style.color="#fefeb4";
-});
-naslov.addEventListener("mouseleave", (e) => {
-  naslov.style.transition = "all 0.5s ease";
-  naslov.style.color="#fff";
-  });
-//Pos1
-pos1.addEventListener("mouseenter", (e) => { 
-  pos1.style.transition = "all 0.5s ease";
-  su.style.transition = "all 0.5s ease";
-  sutext.style.transition = "all 0.5s ease";
-  sutext.style.fontSize = "1.3em";
-});
-pos1.addEventListener("mouseleave", (e) => {
-  pos1.style.transition = "all 0.5s ease";
-  su.style.transition = "all 0.5s ease";
-  sutext.style.transition = "all 0.5s ease";
-  sutext.style.fontSize = "1.2em";
-  });
-//Pos2
-pos2.addEventListener("mouseenter", (e) => { 
-    pos2.style.transition = "all 0.5s ease";
-    jacobs.style.transition = "all 0.5s ease";
-    jacobstext.style.transition = "all 0.5s ease";
-    jacobstext.style.fontSize = "1.3em";
-  });
-  pos2.addEventListener("mouseleave", (e) => {
-  pos2.style.transition = "all 0.5s ease";
-  jacobs.style.transition = "all 0.5s ease";
-  jacobstext.style.transition = "all 0.5s ease";
-  jacobstext.style.fontSize = "1.2em";
-    });
-//Pos3
-pos3.addEventListener("mouseenter", (e) => { 
- pos3.style.transition = "all 0.5s ease";
- thompson.style.transition = "all 0.5s ease";
-  thompsontext.style.transition = "all 0.5s ease";
-  thompsontext.style.fontSize = "1.3em";
-    });
-pos3.addEventListener("mouseleave", (e) => {
-  pos3.style.transition = "all 0.5s ease";
-  thompson.style.transition = "all 0.5s ease";
-  thompsontext.style.transition = "all 0.5s ease";
-  thompsontext.style.fontSize = "1.2em";
-      });
-//Pos4
-pos4.addEventListener("mouseenter", (e) => { 
-  pos4.style.transition = "all 0.5s ease";
-  murphy.style.transition = "all 0.5s ease";
-  murphytext.style.transition = "all 0.5s ease";
-  murphytext.style.fontSize = "1.3em";
-      });
-pos4.addEventListener("mouseleave", (e) => {
-  pos4.style.transition = "all 0.5s ease";
-  murphy.style.transition = "all 0.5s ease";
-  murphytext.style.transition = "all 0.5s ease";
-  murphytext.style.fontSize = "1.2em";
-        });
-
-
-
-
 
 window.onload = function() {
   var canvas = document.getElementById("canvas");
   var context = canvas.getContext("2d");
-  context.scale(2,2);
+  context.scale(3,3);
   context.beginPath();
   context.moveTo(15, 4);
   context.bezierCurveTo(15, 4, 11.181, 14.419, 13, 17);
@@ -160,9 +104,9 @@ window.onload = function() {
   context.bezierCurveTo(15, 4, 15, 4, 15, 4);
   context.lineWidth = 1;
 
-  context.strokeStyle = '#ffbb00';
+  context.strokeStyle = '#fff';
   context.stroke();
 
-  context.fillStyle = '#ffbb00';
+  context.fillStyle = '#fff';
   context.fill();
 }

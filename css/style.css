@@ -24,124 +24,111 @@ body{
   width: 100%;
 }
 .opis{
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
+
   background-image: linear-gradient(rgb(0, 0, 0, 0.5),rgb(0, 0, 0, 1)),url(../images/tokio1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.opis img {
-  object-fit: cover;
-  opacity: 90%;
-  height: 100%;
-  width: 100%;
-}
-.opis img:hover{
-  transform: scale(1.02);
-  transition: 0.5s ease-in-out;
-}
 .opis a{
   text-decoration: none;
-  color: #ffbb00;
+  color: #fff;
 }
 
-#su{
-  object-position: -2.5em;
-} 
-
-#jacobs{
-  object-position: -8em;
-}
-#thompson{
-  object-position: -6em;
-}
-#murphy{
-  object-position: -7em;
-}
-.athletes{
-  padding-top: 5em;
+.ostalo{
+  height: 80vh;
   width: 100%;
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(4,minmax(20em,1fr));
+  display: flex;
+  align-items: center;
   justify-content: center;
-  align-content: center;
+ 
 }
-.posamezni h2{
-  color: white;
-  text-align: center;
-  cursor: default;
+.left, .right{
+  height: 100%;
+  flex-basis: 50%;
 }
-.posamezni:hover{
-  transform: translateY(-10%);
+.left{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .naslov{
-  width: 100%;
-  height: 10vh;
-}
-.naslov h1{
+  transition: all 0.75s ease-out;
   color: #fff;
-  text-align: center;
-  cursor:default;
+  font-size: 6em;
+  margin-bottom: 2em;
 }
 
-.layer{
-  margin: auto;
-  height: 20em;
-  width: 20em;
-  overflow: hidden;
-  border-radius: 30px;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+.krog{
+  transition: all 0.75s ease-out;
+  position: relative;
+  margin-left: 5em;
+  margin-top: 2em;
+  height: 35em;
+  width: 35em;
+  border-radius: 50%;
+  background: linear-gradient(
+    to top,
+    rgba(230, 235, 137, 0.8),
+    rgba(189, 68, 59, 0.8)
+  );
+  
 }
 
+.sneakerPrvi img{
+  position: absolute;
+  top: 0em;
+  left: 1em;
+  height: 35em;
+  
+
+}
+.left span{
+  color: rgb(216, 49, 37);
+}
 
 @media(max-width: 1500px) {
   .meni{
     height: 20vh;
 
   }
-  .layer{
-    height: 15em;
-    width: 15em;
-  }
+  
   body nav a{
     font-size: 0.8em;
   }
   .opis{
-    height: 100vh;
+    height: 80vh;
   }
-  .container{height: 100vh;
+  .ostalo{
+    height: 60vh;
+  }
+
+  .naslov{
+    font-size: 4.75em;
+    margin-left: 0.5em;
+  }
+  .krog{
+    height: 30em;
+    width: 30em;   
+  }
+  .sneakerPrvi img{
+    height: 30em;
+  }
+  .container{height: 80vh;
   }
   body .bottom{
     padding-top:0;
   }
   body .card{
-    height: 120vh;
+    height: 80vh;
     padding-top: 5rem;
     transform: scale(0.8);
   }
   body .back-video{
-    height: 100vh;
-  }
-  .athletes{
-    padding-top: 3em;
-    height: 70vh;
-    gap: 0.6rem;
-    grid-template-columns: repeat(4,minmax(15em,1fr));
-  }
-  #su{
-    object-position: -2em;
-  }
-  #jacobs{
-    object-position: -6.2em;
-  }
-  #thompson{
-    object-position: -4.5em;
-  }
-  #murphy{
-    object-position: -6em;
+    height: 80vh;
   }
 }
 
@@ -229,7 +216,7 @@ nav ul li::after{
     content: '';
     width: 0%;
     height: 2px;
-    background: #ffbb00;
+    background: #fff;
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -343,6 +330,7 @@ nav ul li:hover::after{
     border-radius: 30px;
     font-weight: bolder;
     font-size: 1.3em;
+    margin-top: 2em;
   }
 
   .zelen button{
@@ -350,11 +338,18 @@ nav ul li:hover::after{
   }
   
   canvas {
-
-    width: 10em;
+    width: 8em;
     position: absolute;
     z-index: 50;
     top: 2em;
     left: 2em;
 
+}
+::-webkit-scrollbar{
+  height: 4px;
+  width: 10px;
+  background: rgba(0, 0, 0, 0.8);
+}
+::-webkit-scrollbar-thumb{
+  background: #585858;
 }
