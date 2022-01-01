@@ -1,8 +1,13 @@
+@font-face {
+  font-family: Nike;
+  src: url(../fonts/Futura.otf);
+}
+
 *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: Nike, sans-serif;
 }
 html {
 	scroll-behavior: smooth;
@@ -13,7 +18,10 @@ body{
 
 
 .wrapper{
-
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.5)),url(../images/background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
     width: 100%;
     height: 100%;
     position: relative;
@@ -27,10 +35,10 @@ body{
   height: 100vh;
   width: 100%;
 
-  background-image: linear-gradient(rgb(0, 0, 0, 0.5),rgb(0, 0, 0, 1)),url(../images/tokio1.jpg);
+  /*background-image: linear-gradient(rgb(0, 0, 0, 0.5),rgb(0, 0, 0, 1)),url(../images/tokio1.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover;*/
 }
 
 .opis a{
@@ -55,11 +63,19 @@ body{
   align-items: center;
   justify-content: center;
 }
-.naslov{
+.tekst{
   transition: all 0.75s ease-out;
+  margin-bottom: 6em;
+}
+.naslov{
+  
   color: #fff;
   font-size: 6em;
-  margin-bottom: 2em;
+
+}
+#naslov2{
+  color: rgb(216, 49, 37); 
+  font-size: 6.5em;
 }
 
 .krog{
@@ -79,6 +95,7 @@ body{
 }
 
 .sneakerPrvi img{
+  transition: all 0.75s ease-out;
   position: absolute;
   top: 0em;
   left: 1em;
@@ -86,9 +103,7 @@ body{
   
 
 }
-.left span{
-  color: rgb(216, 49, 37);
-}
+
 
 @media(max-width: 1500px) {
   .meni{
@@ -106,9 +121,12 @@ body{
     height: 60vh;
   }
 
-  .naslov{
+  .tekst .naslov{
     font-size: 4.75em;
     margin-left: 0.5em;
+  }
+  #naslov2{
+    font-size: 5em;
   }
   .krog{
     height: 30em;
@@ -161,15 +179,25 @@ body{
   width: 100%;
   display: flex;
   position: relative;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(230,85,54,0.2), rgba(0,0,0,1));
+ 
 }
 .bottom{
-  padding-top: 50px;
+  padding-top: 30px;
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,1),rgba(176,244,135,0.2));
+
+  position: relative;
+}
+.zadnji{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
 }
 
@@ -190,7 +218,7 @@ body{
 .pozsvg{
   position: absolute;
   z-index: 20;
-  left: 1.8em;
+  left: 1.75em;
   top: 1.2em;
 
 }
@@ -226,18 +254,30 @@ nav ul li:hover::after{
   width: 100%;
 }
 
-
-
   .card {
-    transform-style: preserve-3d;
     height: 90vh;
     width: 400px;
     border-radius: 30px;
     padding: 5rem 0;
-    margin: 30px 10px;
+    margin: 40px 10px;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
     background-color: rgba(255, 255, 255, 0.5);
   }
+
+  .zadnji .circle{
+    background: linear-gradient(
+      to right,
+      rgba(54,54,54,0.5),rgba(176,244,135,0.1)
+    );
+    top: 0em;
+    height: 40em;
+    width: 40em;
+  }
+  .zadnji .sneaker img {
+    height: 500px;
+    z-index: 2;
+  }
+
   .dol{
     background-color: rgba(0, 0, 0, 0.7);
   }
@@ -252,6 +292,26 @@ nav ul li:hover::after{
   .sneaker img {
     height: 180px;
     z-index: 2;
+  }
+  .zadnji .sneaker img{
+    margin: 3em 1em 0 0;
+    transition: all 0.75s ease-out;
+  }
+  #naslovZad{
+    position: absolute;
+    top: 4em;
+
+  }
+  #naslovZad2{
+    position: absolute;
+    height: 235px;
+    width: 1000px;
+    top: 31em;
+    margin: 0;
+    z-index: 200;
+  }
+  #ZadContainer{
+    width: auto;
   }
   #shape{
     height: 27.2px;
@@ -288,15 +348,18 @@ nav ul li:hover::after{
     text-align: center;
     font-size: 1.3rem;
     padding: 0.5rem 0rem 1rem 0;
-    color: #000;
+    color: #545454;
     font-weight: 200;
     transition: all 0.75s ease-out;
   }
   #sel{
     padding: 0 0 0.5em 0;  
   }
-  .bel h1, .bel h3{
+  .bel h1{
     color: #fff;
+  }
+  .bel h3{
+    color: rgba(255, 255, 255, 0.7);
   }
   .selectSize{
     width: 90%;
@@ -356,10 +419,10 @@ nav ul li:hover::after{
     color: white;
     cursor: pointer;
     border-radius: 30px;
-    font-weight: bolder;
     font-size: 1.3em;
     display: block;
     margin: auto;
+    letter-spacing: 0.2em;
   }
   
   #pur1{
@@ -386,6 +449,45 @@ nav ul li:hover::after{
     left: 2em;
 
 }
+.zadnji h1{
+  color: #fff;
+  position: absolute;
+  z-index: 4;
+  font-size: 5em;
+  top: 0em;
+  
+
+}
+
+
+#ZadNaslov span{
+  position: absolute;
+  top: -1.5em;
+  transform-origin: 0 6em;
+}
+
+#ZadNaslov span:nth-of-type(4){
+  top: -1.55em;
+  left: 0em;
+  transform: rotate(-35deg) !important;
+}
+
+
+.area {
+  background:#fff;
+  display: block;
+  border-radius: 50%;
+  height: 40em;
+  width: 40em;
+  top: 0em;
+  opacity:0;
+  position:absolute;
+  z-index: 3;
+  
+}
+
+
+
 ::-webkit-scrollbar{
   height: 4px;
   width: 10px;
