@@ -91,7 +91,6 @@ body{
     rgba(230, 235, 137, 0.8),
     rgba(189, 68, 59, 0.8)
   );
-  
 }
 
 .sneakerPrvi img{
@@ -199,6 +198,8 @@ body{
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
 }
 
 #vic{
@@ -269,12 +270,11 @@ nav ul li:hover::after{
       to right,
       rgba(54,54,54,0.5),rgba(176,244,135,0.1)
     );
-    top: 0em;
-    height: 40em;
-    width: 40em;
+    height: 30em;
+    width: 30em;
   }
   .zadnji .sneaker img {
-    height: 500px;
+    height: 380px;
     z-index: 2;
   }
 
@@ -294,24 +294,17 @@ nav ul li:hover::after{
     z-index: 2;
   }
   .zadnji .sneaker img{
-    margin: 3em 1em 0 0;
+    margin: 1em 1em 0 0;
     transition: all 0.75s ease-out;
   }
-  #naslovZad{
-    position: absolute;
-    top: 4em;
 
-  }
-  #naslovZad2{
-    position: absolute;
-    height: 235px;
-    width: 1000px;
-    top: 31em;
-    margin: 0;
-    z-index: 200;
-  }
   #ZadContainer{
     width: auto;
+    height: 80vh;
+    margin-bottom: 0em;
+    border-radius: 30px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2) , 0px 0px 50px rgba(176,244,135,0.2);
+    transition: all 0.75s ease;
   }
   #shape{
     height: 27.2px;
@@ -331,6 +324,7 @@ nav ul li:hover::after{
     position: absolute;
     border-radius: 50%;
     z-index: 1;
+    
   }
   .zel{
     background: linear-gradient(
@@ -453,9 +447,8 @@ nav ul li:hover::after{
   color: #fff;
   position: absolute;
   z-index: 4;
-  font-size: 5em;
-  top: 0em;
-  
+  top: -0.5em;
+ font-size: 4em;
 
 }
 
@@ -463,8 +456,9 @@ nav ul li:hover::after{
 #ZadNaslov span{
   position: absolute;
   top: -1.5em;
-  transform-origin: 0 6em;
+  transform-origin: 0 5.5em;
 }
+
 
 #ZadNaslov span:nth-of-type(4){
   top: -1.55em;
@@ -473,19 +467,38 @@ nav ul li:hover::after{
 }
 
 
+
+#ZadNaslov2{
+  color: #fff;
+  position: absolute;
+  z-index: 4;
+  bottom: -2.5em;
+  font-size: 2.5em;
+  text-align: center;
+} 
+.zadnji h3{
+  color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  z-index: 4;
+  bottom: -6.5em;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+
+
+
 .area {
   background:#fff;
   display: block;
   border-radius: 50%;
   height: 40em;
   width: 40em;
-  top: 0em;
   opacity:0;
   position:absolute;
   z-index: 3;
   
 }
-
 
 
 ::-webkit-scrollbar{

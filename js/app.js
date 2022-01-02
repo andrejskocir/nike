@@ -46,7 +46,7 @@ krog.style.transition = "all 0.75s ease";
 area1.addEventListener("mouseenter", (e) => { 
   //Popout
 
-  vip.style.transform = "perspective(1000px) translateZ(80px)";
+  vip.style.transform = "rotateZ(-30deg)";
   
 });
 //Animate Out
@@ -54,7 +54,7 @@ area1.addEventListener("mouseleave", (e) => {
 vip.style.transition = "all 0.75s ease";
 
   //Popback
-  vip.style.transform = "translateZ(0px)";
+  vip.style.transform = "rotateZ(0deg)";
 });
 
 
@@ -140,41 +140,35 @@ ZadNaslov.innerHTML = ZadNaslov.innerText.split("").map(
 
 
 
-/*
+
 //Movement Animation to happen
-const card = document.querySelector(".card");
-const container = document.querySelector(".container");
+const Zadcontainer = document.getElementById("ZadContainer");
 //Items
-const title = document.querySelector(".title");
-const sneaker = document.querySelector(".sneaker img");
-const purchase = document.querySelector(".purchase");
-const description = document.querySelector(".info h3");
-const sizes = document.querySelector(".sizes");
+const ZadNaslov2 = document.getElementById("ZadNaslov2");
+const zadnji = document.querySelector(".zadnji");
 
 //Moving Animation Event
-container.addEventListener("mousemove", (e) => {
-  let xAxis = (window.innerWidth / 2 - e.pageX) / 25;
-  let yAxis = (window.innerHeight / 2 - e.pageY) / 25;
-  card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+Zadcontainer.addEventListener("mousemove", (e) => {
+  let xAxis = (window.innerWidth / 2 - e.pageX) / 50;
+  let yAxis = (4000 - e.pageY)/100;
+  console.log(yAxis);
+  Zadcontainer.style.transform = `rotateX(${yAxis}deg) rotateY(${xAxis}deg) `;
 });
 //Animate In
-container.addEventListener("mouseenter", (e) => {
-  card.style.transition = "none";
+Zadcontainer.addEventListener("mouseenter", (e) => {
+  Zadcontainer.style.transition = "none";
   //Popout
-  title.style.transform = "translateZ(150px)";
-  sneaker.style.transform = "translateZ(200px) rotateZ(-45deg)";
-  description.style.transform = "translateZ(125px)";
-  sizes.style.transform = "translateZ(100px)";
-  purchase.style.transform = "translateZ(75px)";
+  ZadNaslov.style.transform = "translateZ(150px)";
+  vip.style.transform = "translateZ(200px)";
+  ZadNaslov2.style.transform = "translateZ(100px)";
+
 });
 //Animate Out
-container.addEventListener("mouseleave", (e) => {
-  card.style.transition = "all 0.5s ease";
-  card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+Zadcontainer.addEventListener("mouseleave", (e) => {
+  Zadcontainer.style.transition = "all 0.5s ease";
+  Zadcontainer.style.transform = `rotateY(0deg)`;
   //Popback
-  title.style.transform = "translateZ(0px)";
-  sneaker.style.transform = "translateZ(0px) rotateZ(0deg)";
-  description.style.transform = "translateZ(0px)";
-  sizes.style.transform = "translateZ(0px)";
-  purchase.style.transform = "translateZ(0px)";
-});*/
+  ZadNaslov.style.transform = "translateZ(0px)";
+  vip.style.transform = "translateZ(0px) rotateZ(0deg)";
+  ZadNaslov2.style.transform = "translateZ(0px)";
+});
