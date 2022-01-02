@@ -165,3 +165,42 @@ Zadcontainer.addEventListener("mouseleave", (e) => {
   Zadcontainer.style.transform = `rotateY(0deg)`;
 
 });
+
+var radios = document.getElementsByTagName('input');
+var value;
+const pur1 = document.getElementById("pur1");
+const pur2 = document.getElementById("pur2");
+const pur3 = document.getElementById("pur3");
+const pur4 = document.getElementById("pur4");
+pur1.onclick = function(){
+  for (var i = 0; i < radios.length; i++) {
+    if (radios[i].type === 'radio' && radios[i].name === 'skp' && radios[i].checked) {
+        //Swal.fire("Your selected size is "+radios[i].value);
+        Swal.fire({
+          title: "Your selected size is "+radios[i].value
+        })
+    }
+
+  }
+}
+pur2.onclick = function(){
+  for (var i = 0; i < radios.length; i++) {
+    if (radios[i].type === 'radio' && radios[i].name === 'skp0' && radios[i].checked) {
+        Swal.fire("Your selected size is "+radios[i].value);
+    }
+  }
+}
+pur3.onclick = function(){
+  for (var i = 0; i < radios.length; i++) {
+    if (radios[i].type === 'radio' && radios[i].name === 'skp3' && radios[i].checked) {
+        Swal.fire("Your selected size is "+radios[i].value);
+    }
+  }
+}
+pur4.onclick = function(){
+  for (var i = 0; i < radios.length; i++) {
+    if (radios[i].type === 'radio' && radios[i].name === 'skp1' && radios[i].checked) {
+        Swal.fire("Your selected size is "+radios[i].value);
+    }
+  }
+}
