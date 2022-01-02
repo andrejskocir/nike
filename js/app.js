@@ -151,24 +151,17 @@ const zadnji = document.querySelector(".zadnji");
 Zadcontainer.addEventListener("mousemove", (e) => {
   let xAxis = (window.innerWidth / 2 - e.pageX) / 50;
   let yAxis = (4000 - e.pageY)/100;
-  console.log(yAxis);
   Zadcontainer.style.transform = `rotateX(${yAxis}deg) rotateY(${xAxis}deg) `;
 });
 //Animate In
 Zadcontainer.addEventListener("mouseenter", (e) => {
   Zadcontainer.style.transition = "none";
-  //Popout
-  ZadNaslov.style.transform = "translateZ(150px)";
-  vip.style.transform = "translateZ(200px)";
-  ZadNaslov2.style.transform = "translateZ(100px)";
+
 
 });
 //Animate Out
 Zadcontainer.addEventListener("mouseleave", (e) => {
   Zadcontainer.style.transition = "all 0.5s ease";
   Zadcontainer.style.transform = `rotateY(0deg)`;
-  //Popback
-  ZadNaslov.style.transform = "translateZ(0px)";
-  vip.style.transform = "translateZ(0px) rotateZ(0deg)";
-  ZadNaslov2.style.transform = "translateZ(0px)";
+
 });

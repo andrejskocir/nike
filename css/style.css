@@ -34,11 +34,6 @@ body{
 .opis{
   height: 100vh;
   width: 100%;
-
-  /*background-image: linear-gradient(rgb(0, 0, 0, 0.5),rgb(0, 0, 0, 1)),url(../images/tokio1.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;*/
 }
 
 .opis a{
@@ -146,6 +141,9 @@ body{
   }
   body .back-video{
     height: 80vh;
+  }
+  body nav ul li{
+    margin: 0 2em;
   }
 
 }
