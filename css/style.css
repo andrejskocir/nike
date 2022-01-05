@@ -485,20 +485,6 @@ nav ul li:hover::after{
 
 
 
-
-.area {
-  background:#fff;
-  display: block;
-  border-radius: 50%;
-  height: 40em;
-  width: 40em;
-  opacity:0;
-  position:absolute;
-  z-index: 3;
-  
-}
-
-
 ::-webkit-scrollbar{
   height: 4px;
   width: 10px;

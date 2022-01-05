@@ -42,21 +42,6 @@ krog.style.transition = "all 0.75s ease";
   krog.style.transform = "rotateZ(0deg) scale(1)";
 });
 
-//Animate In
-area1.addEventListener("mouseenter", (e) => { 
-  //Popout
-
-  vip.style.transform = "rotateZ(-30deg)";
-  
-});
-//Animate Out
-area1.addEventListener("mouseleave", (e) => {
-vip.style.transition = "all 0.75s ease";
-
-  //Popback
-  vip.style.transform = "rotateZ(0deg)";
-});
-
 
 //Animate In
 card.addEventListener("mouseenter", (e) => { 
@@ -157,13 +142,15 @@ Zadcontainer.addEventListener("mousemove", (e) => {
 Zadcontainer.addEventListener("mouseenter", (e) => {
   Zadcontainer.style.transition = "none";
 
+  vip.style.transform = "rotateZ(-30deg)";
 
 });
 //Animate Out
 Zadcontainer.addEventListener("mouseleave", (e) => {
   Zadcontainer.style.transition = "all 0.5s ease";
   Zadcontainer.style.transform = `rotateY(0deg)`;
-
+  vip.style.transition = "all 0.75s ease";
+  vip.style.transform = "rotateZ(0deg)";
 });
 
 var radios = document.getElementsByTagName('input');
@@ -177,8 +164,9 @@ pur1.onclick = function(){
     if (radios[i].type === 'radio' && radios[i].name === 'skp' && radios[i].checked) {
         //Swal.fire("Your selected size is "+radios[i].value);
         Swal.fire({
-          title: "Your selected size is "+radios[i].value
-        })
+          title: "Your selected size is "+radios[i].value,
+          confirmButtonColor: "#f16041",
+        });
     }
 
   }
@@ -186,21 +174,30 @@ pur1.onclick = function(){
 pur2.onclick = function(){
   for (var i = 0; i < radios.length; i++) {
     if (radios[i].type === 'radio' && radios[i].name === 'skp0' && radios[i].checked) {
-        Swal.fire("Your selected size is "+radios[i].value);
+      Swal.fire({
+        title: "Your selected size is "+radios[i].value,
+        confirmButtonColor: "#f16041"
+      });
     }
   }
 }
 pur3.onclick = function(){
   for (var i = 0; i < radios.length; i++) {
     if (radios[i].type === 'radio' && radios[i].name === 'skp3' && radios[i].checked) {
-        Swal.fire("Your selected size is "+radios[i].value);
+      Swal.fire({
+        title: "Your selected size is "+radios[i].value,
+        confirmButtonColor: "#8cbd6e"
+      });
     }
   }
 }
 pur4.onclick = function(){
   for (var i = 0; i < radios.length; i++) {
     if (radios[i].type === 'radio' && radios[i].name === 'skp1' && radios[i].checked) {
-        Swal.fire("Your selected size is "+radios[i].value);
+      Swal.fire({
+        title: "Your selected size is "+radios[i].value,
+        confirmButtonColor: "#8cbd6e"
+      });
     }
   }
 }
