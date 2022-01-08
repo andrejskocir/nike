@@ -434,7 +434,6 @@ nav ul li:hover::after{
   }
   
   canvas {
-    width: 8em;
     position: absolute;
     z-index: 50;
     top: 2em;
