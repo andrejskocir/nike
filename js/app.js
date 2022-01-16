@@ -134,12 +134,12 @@ Zadcontainer.addEventListener("mousemove", (e) => {
   let xAxis = (window.innerWidth / 2 - e.pageX) / 50;
   let yAxis = (4000 - e.pageY)/100;
   Zadcontainer.style.transform = `rotateX(${yAxis}deg) rotateY(${xAxis}deg) `;
+  vip.style.transform = `rotateZ(${xAxis}deg)`;
 });
 //Animate In
 Zadcontainer.addEventListener("mouseenter", (e) => {
   Zadcontainer.style.transition = "none";
 
-  vip.style.transform = "rotateZ(-30deg)";
 
 });
 //Animate Out
